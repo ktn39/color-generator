@@ -222,11 +222,13 @@ input[type="text"]:focus {
 }
 
 .color-card__swatch {
+  display: block;
   height: 112px;
   background: var(--card-color);
 }
 
 .color-card__body {
+  display: block;
   padding: 14px;
 }
 

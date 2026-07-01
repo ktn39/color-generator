@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palette Craft - 配色ジェネレーター</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" aria-labelledby="app-title">
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Designer Color Tool</p>
+        <h1 id="app-title">ベースカラーから洗練された配色パレットを生成</h1>
+        <p class="lead">補色・類似色・トライアド・モノクロマチック・明度違いをワンクリックで確認できます。</p>
+      </div>
+      <div class="hero__swatch" id="heroSwatch" aria-hidden="true"></div>
+    </section>
+
+    <section class="controls" aria-label="カラー設定">
+      <div class="field-group">
+        <label for="colorPicker">ベースカラー</label>
+        <div class="color-input-row">
+          <input type="color" id="colorPicker" value="#4F46E5" aria-label="ベースカラーを選択" />
+          <input type="text" id="hexInput" value="#4F46E5" maxlength="7" spellcheck="false" aria-describedby="hexError" />
+        </div>
+        <p class="error" id="hexError" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="actions">
+        <button class="button button--primary" id="randomButton" type="button">ランダムカラー</button>
+        <button class="button button--secondary" id="copyCssButton" type="button">CSS変数をコピー</button>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+
+    <section class="palettes" id="palettes" aria-label="生成された配色パレット"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
